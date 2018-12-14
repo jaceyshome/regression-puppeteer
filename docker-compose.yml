@@ -1,0 +1,66 @@
+version: '3'
+
+services:
+  regression-server:
+    image: jacobwang05/regression-server:1.14.0
+    container_name: regression-server
+    hostname: regression-server
+    volumes:
+      - "./regression-server/datastore:/home/node/app/datastore"
+      - "./regression-server/logs:/home/node/app/logs"
+    ports:
+      - "7071:7071"
+    restart: on-failure
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7071"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  regression-client:
+    image: jacobwang05/regression-client:1.7.1
+    container_name: regression-client
+    restart: on-failure
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7090"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    depends_on:
+      - regression-server
+    ports:
+      - "7090:7090"
+
+  regression-puppeteer-hack:
+    build: ./
+    container_name: regression-puppeteer-hack
+    volumes:
+      - "./output:/home/node/app/output"
+      - "./logs:/home/node/app/logs"
+    depends_on:
+      - regression-server
+    entrypoint: chmod 777 ./output ./logs
+
+  regression-puppeteer-server:
+    build: ./
+    container_name: regression-puppeteer-server
+    environment:
+      - ENV=production
+      - REGRESSION_SERVER_HOST=regression-server
+    volumes:
+      - "./output:/home/node/app/output"
+      - "./logs:/home/node/app/logs"
+    restart: on-failure
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7080"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+    depends_on:
+      - regression-server
+    ports:
+      - "7080:7080"
+
+networks:
+  default:
+    driver: bridge

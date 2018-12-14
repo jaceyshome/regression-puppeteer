@@ -1,0 +1,23 @@
+node_modules
+jspm_packages
+bower_components
+.idea
+.DS_STORE
+*.iml
+Test Results - Test.html
+backstop_data/bitmaps_reference
+backstop_data/bitmaps_test
+npm-debug.log
+.tmp
+.yo-rc.json
+test/cucumber/output
+test/webdriverio
+output/
+reports/*.html
+reports/*.json
+dist
+logs/*.log
+tmp/*
+.history
+logs
+regression-server/*
