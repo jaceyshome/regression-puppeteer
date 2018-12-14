@@ -1,4 +1,4 @@
-@regressionVisual @prod @watch
+@regressionVisual @prod
 Feature: Page visual regression none production environment
 
     Scenario Outline: Page visual regression demo
@@ -9,3 +9,5 @@ Feature: Page visual regression none production environment
         Examples:
             |   PAGE URL                                        |
             |   http://todomvc.com//examples/backbone/          |
+            |   http://todomvc.com//examples/angularjs/         |
+            |   http://todomvc.com//examples/mithril/           |
