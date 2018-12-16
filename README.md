@@ -3,8 +3,11 @@ Regression puppeteer is a tool to write and run (visual) regression test with Pu
 
 ![demo screenshot](docs/demo.jpeg)
 
+
+
 ## Getting started
-These instructions will get you a copy of the project up and running on your local machine for development. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development. See deployment for notes on how to deploy the project with docker.
+
 
 
 ## Prerequisites
@@ -96,15 +99,15 @@ publish the image
 npm run docker:publish
 ```
 
-If you want to build and deploy a docker image, use [duluca/npm-scripts-for-docker.md](https://gist.github.com/duluca/d13e501e870215586271b0f9ce1781ce/).
+More details about using npm scripts for docker are in [duluca/npm-scripts-for-docker.md](https://gist.github.com/duluca/d13e501e870215586271b0f9ce1781ce/).
 
 
 ## Built with
-[Puppeteer](https://pptr.dev/) - puppeteer API
-
 [CucumberJs](https://github.com/cucumber/cucumber-js) - Cucumber features
 
 [npm-scripts-for-docker.md](https://gist.github.com/duluca/d13e501e870215586271b0f9ce1781ce/)
+
+[Puppeteer](https://pptr.dev/) - puppeteer API
 
 [regression-client](https://github.com/jaceyshome/regression-client) - client site visual result viewer
 
