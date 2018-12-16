@@ -71,15 +71,15 @@ var viewports = {
 
 
 ## Development
+The example feature is `features/page-visual/page-visual.tpl`, the step `page-visual-steps.js` and `page-visual-support` are in the same folder.
 
 ### Scripts
+Run `npm run build` to build Cucumber features for different viewport sizes. the related script is in `scripts/build-features`.
 
 
 
 ## Deployment
-If you want to build and deploy a docker image, use [duluca/npm-scripts-for-docker.md](https://gist.github.com/duluca/d13e501e870215586271b0f9ce1781ce/).
-
-The `Dockerfile` is ready to use, related configuration file is `config/config-docker.js`. To build an image, the docker repository is in the `package.json`: 
+The `Dockerfile` is ready to use, related configuration file is `config/config-docker.js`. To build an image, set your docker repository in the `package.json`, for example
 ```
   "config": {
     "imageRepo": "jacobwang05/regression-puppeteer",
@@ -87,7 +87,7 @@ The `Dockerfile` is ready to use, related configuration file is `config/config-d
     "imagePort": "7080"
   },
 ```
-When you build an image, run 
+When you build an image, run
 ```
 npm run docker:build
 ```
@@ -96,10 +96,16 @@ publish the image
 npm run docker:publish
 ```
 
+If you want to build and deploy a docker image, use [duluca/npm-scripts-for-docker.md](https://gist.github.com/duluca/d13e501e870215586271b0f9ce1781ce/).
+
 
 ## Built with
 [Puppeteer](https://pptr.dev/) - puppeteer API
+
 [CucumberJs](https://github.com/cucumber/cucumber-js) - Cucumber features
+
+[npm-scripts-for-docker.md](https://gist.github.com/duluca/d13e501e870215586271b0f9ce1781ce/)
+
 [regression-client](https://github.com/jaceyshome/regression-client) - client site visual result viewer
 
 [regression-server](https://github.com/jaceyshome/regression-server) - server site database and restful API
