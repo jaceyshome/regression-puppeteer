@@ -1,6 +1,6 @@
 {
   "name": "regression-puppeteer",
-  "version": "1.4.1",
+  "version": "1.0.0",
   "author": "Jake Wang",
   "license": "MIT",
   "description": "Visual regression test, regression test, puppeteer visual test",
