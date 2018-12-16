@@ -3,13 +3,16 @@
   "version": "1.4.1",
   "author": "Jake Wang",
   "license": "MIT",
-  "description": "Regression test code base",
-  "main": "index.js",
+  "description": "Visual regression test, regression test, puppeteer visual test",
+  "license": "MIT",
   "keywords": [
     "regression",
+    "cucumber",
+    "puppeteer",
     "headless",
     "automation",
-    "test"
+    "visual test",
+    "screenshot"
   ],
   "engines": {
     "node": "9.3.0"
@@ -24,7 +27,7 @@
     "change-log": "conventional-changelog -p angular -i CHANGELOG.md -s",
     "build": "node ./scripts/build-features.js",
     "pre-run": "npm run-script build-features",
-    "cuke": "cucumber-js --tags 'not @prodOnly' -f json:tmp/cucumber-report.json",
+    "cuke": "cucumber-js --tags 'not @prodOnly'",
     "cuke-watch": "NODE_TEST_MODE=watch cucumber-js --tags '@watch'",
     "run-visual": "cucumber-js --tags '@regressionVisual'",
     "localdev": "NODE_ENV=local-development npm run-script cuke",

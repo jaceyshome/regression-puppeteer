@@ -39,7 +39,7 @@ services:
       - "./logs:/home/node/app/logs"
     depends_on:
       - regression-server
-    entrypoint: chmod 777 ./output ./logs
+    entrypoint: chmod 777 -R ./output ./logs ./regression-server
 
   regression-puppeteer-server:
     build: ./

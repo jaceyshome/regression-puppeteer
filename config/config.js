@@ -1,3 +1,8 @@
+/**
+ * Loading configuration
+ * Before running cucumber features and scenarios,this file loads different configurations and returns the global configuration object.
+ */
+
 //--- default config
 let config = require('./config-base.js');
 

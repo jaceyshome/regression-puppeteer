@@ -57,7 +57,7 @@ var viewports = {
         "height": 900
     }
 };
-//default viewport
+//--- default viewport
 const defaultViewportSize = viewports["desktop"];
 //--- regression config
 const regressionOptions = {

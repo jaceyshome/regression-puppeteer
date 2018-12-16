@@ -51,7 +51,7 @@ RUN mkdir public
 RUN mkdir tmp
 # Make the output folder is accessable for the public
 RUN ln -s /home/node/app/output /home/node/app/public/output
-# set docker image flga
+# set docker image flag
 ENV IS_DOCKER_IMAGE true
 # In development environment
 ENV NODE_ENV production
