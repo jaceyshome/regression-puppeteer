@@ -1,7 +1,7 @@
 # Regression puppeteer
 Regression puppeteer is a tool to write and run (visual) regression test with Puppeteer and Cucumber. With them, you are able to write visual test or Cucumber features with Puppeteer APIs.
 
-
+![demo screenshot](docs/demo.jpeg)
 
 ## Getting started
 These instructions will get you a copy of the project up and running on your local machine for development. See deployment for notes on how to deploy the project on a live system.
